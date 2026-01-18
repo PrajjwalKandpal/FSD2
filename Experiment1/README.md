@@ -1,16 +1,31 @@
-# React + Vite
+# Learning Outcomes – Experiment 1 (Basic SPA with React & Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Understand SPA Architecture:
+Grasp the concept of a Single Page Application, where content updates dynamically without full page reloads.
 
-Currently, two official plugins are available:
+## 2. Set Up a Modern Frontend Environment:
+Install and configure Node.js, npm, Vite, and React to create a functional development environment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 3. Create Component-Based UIs:
+Build reusable React components such as headers, footers, and pages to structure a scalable SPA.
 
-## React Compiler
+## 4. Implement Client-Side Routing:
+Use React Router to navigate between pages (Home, About, Contact) without reloading the browser.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 5. Manage State with React Hooks:
+Use useState and useEffect hooks to manage dynamic content, track user interactions, and fetch data.
 
-## Expanding the ESLint configuration
+## 6. Integrate External APIs:
+Fetch and display data from APIs (e.g., JSONPlaceholder) using fetch and handle loading/error states.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 7. Handle Forms and User Input:
+Implement controlled forms, manage input state, and handle submissions with React.
+
+## 8. Apply Styling and Theming:
+Use CSS and dynamic theme toggles (light/dark) to enhance the UI/UX of the application.
+
+## 9. ersion Control with Git:
+Track project changes, create commits, manage branches, and push the project to a remote repository (GitHub).
+
+## 10. Deploy SPA to a Hosting Platform:
+Build a production-ready version of the SPA and deploy it using platforms like Netlify, Vercel, or GitHub Pages.
