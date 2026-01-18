@@ -1,16 +1,21 @@
-# React + Vite
+# LEARNING OUTCOMES - Experiment 2: Design UI using Component Libraries
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Explain the role and advantages of UI component libraries in modern web application development, including consistency, responsiveness, and accessibility.
 
-Currently, two official plugins are available:
+## 2. Install and configure Material UI and React-Bootstrap within a React project using standard package managers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 3. Apply pre-built UI components from Material UI and Bootstrap to construct professional and reusable user interfaces.
 
-## React Compiler
+## 4. Design responsive layouts using grid systems provided by Material UI and Bootstrap for multi-device compatibility.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 5. Customize themes and styles to implement institutional or brand-specific UI designs using theming mechanisms.
 
-## Expanding the ESLint configuration
+## 6. Develop interactive navigation components such as app bars, side drawers, navbars, and menus using component libraries.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 7. Create and validate forms using library components while following accessibility and usability best practices.
+
+## 8. Build data presentation components such as cards, tables, modals, and alerts for dashboard-based applications.
+
+## 9. Compare Material UI and Bootstrap in terms of design philosophy, customization flexibility, performance, and use cases.
+
+## 10. Construct a complete responsive dashboard application by integrating navigation, forms, data displays, and theming using a component library.
