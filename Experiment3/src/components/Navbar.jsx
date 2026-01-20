@@ -4,7 +4,7 @@ import "./Navbar.css"; // optional, keep if you already have styles
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h3>Experiment 2 – UI Components</h3>
+      <h3>Experiment 3 – SPA ROUTING</h3>
 
       <div className="nav-links">
         <Link to="/">HOME</Link>
