@@ -1,0 +1,20 @@
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+header.light {
+  background: linear-gradient(135deg, #c00000, #f0f0f0);
+  color: black;
+}
+
+header.dark {
+  background: linear-gradient(135deg, #000000, #444);
+  color: white;
+}
+
+button {
+  padding: 6px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
