@@ -1,16 +1,21 @@
-# React + Vite
+# EXPERIMENT 3 : Implement Routing in SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 1. Explain the concept of client-side routing in Single Page Applications (SPAs) and distinguish it from server-side routing by analyzing page reload behavior, state preservation, and user experience.
 
-Currently, two official plugins are available:
+### 2. Install, configure, and integrate React Router DOM (v6) into a React application to enable navigation without full-page refreshes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 3. Implement basic routing structures using BrowserRouter, Routes, and Route components to create multiple navigable pages such as Home, About, and Contact.
 
-## React Compiler
+### 4. Design and implement navigation menus using Link and NavLink components, including active link styling for improved user experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 5. Develop dynamic routes using URL parameters and access route data using hooks such as useParams to display content dynamically based on route values.
 
-## Expanding the ESLint configuration
+### 6. Apply nested routing techniques using layout components and the Outlet feature to build reusable page structures with shared headers, footers, or sidebars.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 7. Implement programmatic navigation using the useNavigate hook to redirect users after actions such as login, logout, or form submission.
+
+### 8. Design and secure protected routes by implementing authentication-based route guards that restrict access to authorized users only.
+
+### 9. Handle invalid or undefined routes gracefully by implementing a custom 404 “Not Found” page using wildcard route matching.
+
+### 10. Optimize routing performance and usability by applying best practices such as lazy loading routes, handling redirects, managing query parameters, and configuring servers for proper SPA deployment.
