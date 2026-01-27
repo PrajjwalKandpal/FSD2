@@ -1,25 +1,12 @@
-import { useState } from "react"; 
-
-export default function LocalCounter() {
-  const [count, setCount] = useState(0);
-
-  // Event handler functions for click Event
-  const increaseCount = () => setCount(count + 1);
-  const decreaseCount = () => setCount(count - 1);
-
+export default function LocalCounter({ count, setCount }) {
   return (
-    <div>
-
-      <h3>Local Count: {count}</h3>
-      {/* Binding event handlers to buttons  */}
-      <button onClick={increaseCount}>
-        Increase
+    <>
+      <button className="inc" onClick={() => setCount(count + 1)}>
+        INCREASE
       </button>
-
-      <button onClick={decreaseCount}>
-        Decrease
+      <button className="dec" onClick={() => setCount(count - 1)}>
+        DECREASE
       </button>
-
-    </div>
+    </>
   );
 }

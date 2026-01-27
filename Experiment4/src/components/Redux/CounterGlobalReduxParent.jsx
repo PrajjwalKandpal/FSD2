@@ -1,20 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 
-export default function CounterReduxParent(props) {
+export default function CounterReduxParent({ cno }) {
   const count = useSelector(state => state.count);
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <h3>{props.cno} : Global State (Redux) Count: {count}</h3>
-
-      <button onClick={() => dispatch({ type: "INCREMENT" })}>
-        Increase
-      </button>
-
-      <button onClick={() => dispatch({ type: "DECREMENT" })}>
-        Decrease
-      </button>
-    </div>
+    <>
+      <h2>{cno} : Global State (Redux) Count: {count}</h2>
+      <div className="btn-row">
+        <button onClick={() => dispatch({ type: "INCREMENT" })}>
+          INCREASE
+        </button>
+        <button onClick={() => dispatch({ type: "DECREMENT" })}>
+          DECREASE
+        </button>
+      </div>
+    </>
   );
 }

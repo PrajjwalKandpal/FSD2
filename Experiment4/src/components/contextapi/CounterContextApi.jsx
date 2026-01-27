@@ -5,17 +5,9 @@ export const CounterContext = createContext();
 export function CounterProvider({ children }) {
   const [count, setCount] = useState(0);
 
-  const obj1 = { count, setCount }
-  
-  // const obj2 = { 
-  //   "count" : count, 
-  //   "setCount" : setCount 
-  // }
-
   return (
-    <CounterContext.Provider value={obj1}>
+    <CounterContext.Provider value={{ count, setCount }}>
       {children}
     </CounterContext.Provider>
   );
 }
-export default CounterProvider;

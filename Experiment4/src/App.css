@@ -1,42 +1,70 @@
 #root {
-  max-width: 2000px;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: auto;
   padding: 2rem;
+  font-family: serif;
+}
+
+/* COMMON CARD */
+.card {
+  padding: 40px;
+  margin: 30px auto;
+  border-radius: 12px;
+  width: 90%;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* COLORS */
+.local {
+  background: #dbeeff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.context {
+  background: #d7ffe5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.redux {
+  background: #ffe4d4;
 }
 
-.card {
-  padding: 2em;
+/* BUTTON ROW */
+.btn-row {
+  margin-top: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+/* BASE BUTTON */
+button {
+  padding: 14px 36px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* LOCAL STATE BUTTONS */
+.local .inc {
+  background: transparent;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+}
+
+.local .dec {
+  background: transparent;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+}
+
+/* CONTEXT BUTTONS */
+.context button {
+  background: transparent;
+  border: 2px solid #3aa76d;
+  color: #3aa76d;
+}
+
+/* REDUX BUTTONS */
+.redux button {
+  background: transparent;
+  border: 2px solid #f7b894;
+  color: #d49d7c;
 }

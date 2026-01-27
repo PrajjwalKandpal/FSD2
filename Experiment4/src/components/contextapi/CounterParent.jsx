@@ -1,23 +1,13 @@
 import { useContext } from "react";
 import { CounterContext } from "./CounterContextApi";
 
-function ParentCounter() {
+export default function ParentCounter() {
   const { count, setCount } = useContext(CounterContext);
 
   return (
-    <div>
-      <h2>Context API Working</h2>
-      <h3>Count: {count}</h3>
-
-      <button onClick={() => setCount(count + 1)}>
-        Increase
-      </button>
-
-      <button onClick={() => setCount(count - 1)}>
-        Decrease
-      </button>
-    </div>
+    <>
+      <button onClick={() => setCount(count + 1)}>INCREASE</button>
+      <button onClick={() => setCount(count - 1)}>DECREASE</button>
+    </>
   );
 }
-
-export default ParentCounter;
