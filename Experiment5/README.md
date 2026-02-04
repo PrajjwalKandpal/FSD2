@@ -1,6 +1,6 @@
 # LEARNING OUTCOMES: EXPERIMENT 5 (Optimize frontend performance using lazy loading.)
 
-## Name : Prajjwal Kandpal, UID : 23BIS70052
+## Name - Prajjwal Kandpal, UID - 23BIS70052
 
 ### 1. Understand why SPAs feel slow initially and how large JS bundles affect first page load time.
 
