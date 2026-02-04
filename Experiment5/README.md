@@ -1,5 +1,7 @@
 # LEARNING OUTCOMES: EXPERIMENT 5 (Optimize frontend performance using lazy loading.)
 
+## Name : Prajjwal Kandpal, UID : 23BIS70052
+
 ### 1. Understand why SPAs feel slow initially and how large JS bundles affect first page load time.
 
 ### 2. Implement lazy loading in React using {React.lazy()} and {Suspense} to load components only when required.
