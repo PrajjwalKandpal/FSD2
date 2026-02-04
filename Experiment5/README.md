@@ -2,7 +2,7 @@
 
 ### 1. Understand why SPAs feel slow initially and how large JS bundles affect first page load time.
 
-### 2. Implement lazy loading in React using (React.lazy()) and (Suspense) to load components only when required.
+### 2. Implement lazy loading in React using {React.lazy()} and {Suspense} to load components only when required.
 
 ### 3. Build a page-wise SPA using React Router where routes are loaded dynamically instead of all at once.
 
