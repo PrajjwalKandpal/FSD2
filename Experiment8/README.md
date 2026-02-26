@@ -66,10 +66,12 @@ Flask development server successfully started.
 ![Read One - ID 1]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145839.png")
 
 ### 5. UPDATE Student (PUT)
-![Update Student]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145933.png")
+![Update Student]<img width="1615" height="927" alt="Screenshot 2026-02-26 145933" src="https://github.com/user-attachments/assets/5a3a333a-1a34-4686-89ed-f1d36073a83d" />
+
 
 ### 6. DELETE Student
-![Delete Student](Screenshot 2026-02-26 150729.png)
+![Delete Student]<img width="1636" height="956" alt="Screenshot 2026-02-26 145958" src="https://github.com/user-attachments/assets/64d63a9a-7ca2-4cf4-94a2-22e50b05e7d5" />
+
 
 
 ## API Endpoints Summary
@@ -80,6 +82,7 @@ Flask development server successfully started.
 | GET    | /students/<id> | Get student by ID |
 | PUT    | /students/<id> | Update student |
 | DELETE | /students/<id> | Delete student |
+
 
 ## Learning Outcome
 - Understood how to set up and configure a Flask application for building RESTful APIs.
