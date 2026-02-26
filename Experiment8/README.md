@@ -69,7 +69,7 @@ Flask development server successfully started.
 ![Update Student]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145933.png")
 
 ### 6. DELETE Student
-![Delete Student]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145958.png")
+![Delete Student](Screenshot 2026-02-26 150729.png)
 
 
 ## API Endpoints Summary
