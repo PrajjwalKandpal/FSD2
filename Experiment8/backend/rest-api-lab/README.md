@@ -54,6 +54,7 @@ Experiment8/
 ## STEPS & SCREENSHOTS
 ### 1. Server Running
 ![](SERVERRUN.png)
+
 Flask development server successfully started.
 
 ### 2. CREATE Student (POST)
