@@ -56,7 +56,7 @@ Experiment8/
 Flask development server successfully started.
 
 ### 2. CREATE Student (POST)
-![Create Student 1]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145556.png")
+![Create Student 1](rest-api-lab\Screenshot 2026-02-26 145556.png)
 
 ### 3. READ ALL Students (GET)
 ![Read All Students]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145816.png")
