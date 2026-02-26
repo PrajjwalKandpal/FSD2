@@ -37,6 +37,7 @@ Experiment8/
             ├── Screenshot3.png
             ├── Screenshot4.png
             └── Screenshot5.png
+```
 
 ### Technologies Used
 
@@ -52,24 +53,25 @@ Experiment8/
 
 ## STEPS & SCREENSHOTS
 ### 1. Server Running
-![](rest-api-lab/SERVERRUN.png)
+![](SERVERRUN.png)
 Flask development server successfully started.
 
 ### 2. CREATE Student (POST)
-![Create Student 1](rest-api-lab/CREATE.png)
+![Create Student 1](CREATE.png)
 
 ### 3. READ ALL Students (GET)
-![Read All Students](rest-api-lab/READ.png)
+![Read All Students](READ.png)
 
 ### 4. READ ONE Student
 ### GET Student ID = 1
-![Read One - ID 1](rest-api-lab/READ1.png)
+![Read One - ID 1](READ1.png)
 
 ### 5. UPDATE Student (PUT)
-![Update Student](rest-api-lab/UPDATE.png)
+![Update Student](UPDATE.png)
 
 ### 6. DELETE Student
-![Delete Student](rest-api-lab/DELETE.png)
+![Delete Student](DELETE.png)
+
 
 
 ## API Endpoints Summary
@@ -80,6 +82,7 @@ Flask development server successfully started.
 | GET    | /students/<id> | Get student by ID |
 | PUT    | /students/<id> | Update student |
 | DELETE | /students/<id> | Delete student |
+
 
 ## Learning Outcome
 - Understood how to set up and configure a Flask application for building RESTful APIs.
