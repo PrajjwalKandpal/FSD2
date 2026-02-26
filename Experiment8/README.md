@@ -52,24 +52,24 @@ Experiment8/
 
 ## STEPS & SCREENSHOTS
 ### 1. Server Running
-![]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 150729.png")
+![](rest-api-lab/SERVERRUN.png)
 Flask development server successfully started.
 
 ### 2. CREATE Student (POST)
-![Create Student 1]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145556.png")
+![Create Student 1](rest-api-lab/CREATE.png)
 
 ### 3. READ ALL Students (GET)
-![Read All Students]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145816.png")
+![Read All Students](rest-api-lab/READ.png)
 
 ### 4. READ ONE Student
 ### GET Student ID = 1
-![Read One - ID 1]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145839.png")
+![Read One - ID 1](rest-api-lab/READ1.png)
 
 ### 5. UPDATE Student (PUT)
-![Update Student]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145933.png")
+![Update Student](rest-api-lab/UPDATE.png)
 
 ### 6. DELETE Student
-![Delete Student]("C:\Users\acer\Desktop\FSD2\Experiment8\backend\rest-api-lab\Screenshot 2026-02-26 145958.png")
+![Delete Student](rest-api-lab/DELETE.png)
 
 
 ## API Endpoints Summary
