@@ -70,7 +70,7 @@ Flask development server successfully started.
 
 
 ### 6. DELETE Student
-![Delete Student]<img width="1636" height="956" alt="Screenshot 2026-02-26 145958" src="https://github.com/user-attachments/assets/64d63a9a-7ca2-4cf4-94a2-22e50b05e7d5" />
+![Delete Student](<img width="1636" height="956" alt="Screenshot 2026-02-26 145958" src="https://github.com/user-attachments/assets/64d63a9a-7ca2-4cf4-94a2-22e50b05e7d5" />)
 
 
 
