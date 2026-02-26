@@ -3,17 +3,40 @@
 ### Project Structure
 
 ```bash
-Experiment_8/
-├── routes/
-│   └── student_routes.py
-├── venv/
-│   ├── Include/
-│   ├── Lib/
-│   └── Scripts/
-├── requirements.txt
-├── app.py
-├── run.py
-└── README.md
+Experiment8/
+│
+└── backend/
+    │
+    └── rest-api-lab/
+        │
+        ├── __pycache__/              # Compiled Python files (auto-generated)
+        │
+        ├── routes/                   # Contains all route modules
+        │   └── student_routes.py     # Student CRUD API routes
+        │
+        ├── virenv/                   # Virtual Environment folder
+        │   ├── Include/
+        │   ├── Lib/
+        │   ├── Scripts/
+        │   ├── .gitignore
+        │   └── pyvenv.cfg
+        │
+        ├── app.py                    # Flask app factory & configuration
+        │
+        ├── run.py                    # Entry point to start the server
+        │
+        ├── Procfile                  # Deployment configuration file
+        │
+        ├── requirements.txt          # Project dependencies
+        │
+        ├── README.md                 # Project documentation
+        │
+        └── Screenshots/              # (Recommended: move screenshots here)
+            ├── Screenshot1.png
+            ├── Screenshot2.png
+            ├── Screenshot3.png
+            ├── Screenshot4.png
+            └── Screenshot5.png
 ```
 
 ### Technologies Used
@@ -23,9 +46,9 @@ Experiment_8/
 - REST API
 - Postman
 - Render (Cloud Deployment)
-- Virtual Environment (venv)
+- Virtual Environment (virenv)
 
-### Deployment Base URL --> [Render Link](https://two3bis70035-experiment-8.onrender.com)
+### Deployment Base URL --> [Render Link](https://experiment8fsd2.onrender.com/)
 
 
 ## STEPS & SCREENSHOTS
@@ -50,6 +73,7 @@ Flask development server successfully started.
 ![Delete Student](Screenshots/6.png)
 
 
+
 ## API Endpoints Summary
 | Method | Endpoint | Description |
 |--------|----------|------------|
@@ -59,8 +83,10 @@ Flask development server successfully started.
 | PUT    | /students/<id> | Update student |
 | DELETE | /students/<id> | Delete student |
 
+
 ## Learning Outcome
-- Learnt about backend technologies
+- Understood how to set up and configure a Flask application for building RESTful APIs.
+- Learned to map HTTP methods "(GET, POST, PUT, DELETE)" to corresponding CRUD operations on a Student resource.
 - Learnt to create virtual enviroment of python using venv
 - Learnt about flask in python
 - Learnt about RESTful APIs
