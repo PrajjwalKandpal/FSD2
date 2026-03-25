@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import os
 
 app = Flask(__name__)
 
@@ -9,18 +10,19 @@ orders = [
     {"id": 103, "item": "Tablet", "status": "Delivered"}
 ]
 
-# ✅ Home route (avoid 404)
+# ✅ Home route
 @app.route('/')
 def home():
     return "Order Service is running 🚀"
 
+# ✅ Get all orders
 @app.route('/orders', methods=['GET'])
 def get_orders():
     return jsonify(orders), 200
 
+# ✅ Update order
 @app.route('/orders/<int:order_id>', methods=['PUT'])
 def update_order(order_id):
-    # ✅ Validate JSON input
     if not request.is_json:
         return jsonify({"error": "Request must be JSON"}), 400
 
@@ -40,5 +42,7 @@ def update_order(order_id):
     return jsonify({"error": "Order not found"}), 404
 
 
+# ✅ Render-compatible run
 if __name__ == '__main__':
-    app.run(port=5001, debug=True)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host='0.0.0.0', port=port)
