@@ -20,7 +20,27 @@ mysql = MySQL(app)
 def home():
     return jsonify({"message": "Student CRUD API is running!"})
 
-# ── CREATE ──────────────────────────────────────────────
+# ── DEBUG ROUTE ──────────────────────────────────────────
+@app.route("/debug")
+def debug():
+    return jsonify({
+        "MYSQL_HOST": os.getenv("MYSQL_HOST"),
+        "MYSQL_USER": os.getenv("MYSQL_USER"),
+        "MYSQL_DB":   os.getenv("MYSQL_DB"),
+        "MYSQL_PORT": os.getenv("MYSQL_PORT"),
+        "PASSWORD_SET": bool(os.getenv("MYSQL_PASSWORD"))
+    })
+
+@app.route("/dbtest")
+def dbtest():
+    try:
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT 1")
+        cur.close()
+        return jsonify({"status": "DB connected successfully ✅"})
+    except Exception as e:
+        return jsonify({"status": "DB FAILED ❌", "error": str(e)}), 500
+
 @app.route("/api/students", methods=["POST"])
 def create_student():
     data = request.get_json()
@@ -39,7 +59,6 @@ def create_student():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# ── READ ALL ─────────────────────────────────────────────
 @app.route("/api/students", methods=["GET"])
 def get_students():
     try:
@@ -51,7 +70,6 @@ def get_students():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# ── READ ONE ─────────────────────────────────────────────
 @app.route("/api/students/<int:student_id>", methods=["GET"])
 def get_student(student_id):
     try:
@@ -65,7 +83,6 @@ def get_student(student_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# ── UPDATE ───────────────────────────────────────────────
 @app.route("/api/students/<int:student_id>", methods=["PUT"])
 def update_student(student_id):
     data = request.get_json()
@@ -77,7 +94,6 @@ def update_student(student_id):
         if not cur.fetchone():
             cur.close()
             return jsonify({"error": "Student not found"}), 404
-
         fields, values = [], []
         for key in ["name", "email", "age", "course"]:
             if key in data:
@@ -91,7 +107,6 @@ def update_student(student_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# ── DELETE ───────────────────────────────────────────────
 @app.route("/api/students/<int:student_id>", methods=["DELETE"])
 def delete_student(student_id):
     try:
