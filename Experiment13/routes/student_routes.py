@@ -1,9 +1,13 @@
 from flask import Blueprint, request, jsonify
-from flask_mysqldb import MySQL
 from validators import validate_student
 
 student_bp = Blueprint("students", __name__)
-mysql = MySQL()
+_mysql = None
+
+def register_routes(app, mysql):
+    global _mysql
+    _mysql = mysql
+    app.register_blueprint(student_bp, url_prefix="/api")
 
 # ── CREATE ──────────────────────────────────────────────
 @student_bp.route("/students", methods=["POST"])
@@ -16,13 +20,13 @@ def create_student():
     if errors:
         return jsonify({"errors": errors}), 422
 
-    cur = mysql.connection.cursor()
+    cur = _mysql.connection.cursor()
     try:
         cur.execute(
             "INSERT INTO student (name, email, age, course) VALUES (%s, %s, %s, %s)",
             (data["name"], data["email"], int(data["age"]), data["course"])
         )
-        mysql.connection.commit()
+        _mysql.connection.commit()
         new_id = cur.lastrowid
         return jsonify({"message": "Student created", "id": new_id}), 201
     except Exception as e:
@@ -33,7 +37,7 @@ def create_student():
 # ── READ ALL ─────────────────────────────────────────────
 @student_bp.route("/students", methods=["GET"])
 def get_students():
-    cur = mysql.connection.cursor()
+    cur = _mysql.connection.cursor()
     cur.execute("SELECT * FROM student")
     students = cur.fetchall()
     cur.close()
@@ -42,7 +46,7 @@ def get_students():
 # ── READ ONE ─────────────────────────────────────────────
 @student_bp.route("/students/<int:student_id>", methods=["GET"])
 def get_student(student_id):
-    cur = mysql.connection.cursor()
+    cur = _mysql.connection.cursor()
     cur.execute("SELECT * FROM student WHERE id = %s", (student_id,))
     student = cur.fetchone()
     cur.close()
@@ -61,7 +65,7 @@ def update_student(student_id):
     if errors:
         return jsonify({"errors": errors}), 422
 
-    cur = mysql.connection.cursor()
+    cur = _mysql.connection.cursor()
     cur.execute("SELECT * FROM student WHERE id = %s", (student_id,))
     if not cur.fetchone():
         cur.close()
@@ -77,7 +81,7 @@ def update_student(student_id):
 
     try:
         cur.execute(f"UPDATE student SET {', '.join(fields)} WHERE id = %s", values)
-        mysql.connection.commit()
+        _mysql.connection.commit()
         return jsonify({"message": "Student updated"}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -87,13 +91,13 @@ def update_student(student_id):
 # ── DELETE ───────────────────────────────────────────────
 @student_bp.route("/students/<int:student_id>", methods=["DELETE"])
 def delete_student(student_id):
-    cur = mysql.connection.cursor()
+    cur = _mysql.connection.cursor()
     cur.execute("SELECT * FROM student WHERE id = %s", (student_id,))
     if not cur.fetchone():
         cur.close()
         return jsonify({"error": "Student not found"}), 404
 
     cur.execute("DELETE FROM student WHERE id = %s", (student_id,))
-    mysql.connection.commit()
+    _mysql.connection.commit()
     cur.close()
     return jsonify({"message": "Student deleted"}), 200
