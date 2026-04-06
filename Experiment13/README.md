@@ -8,6 +8,32 @@ Flask + MySQL REST API for managing student records.
 3. Run MySQL setup SQL from `schema.sql`
 4. Start server: `python app.py`
 
+
+## Screenshots
+
+### 1. Server/DB Connection Running
+![Customer Service](SERVERRUN.png)
+
+### 2. Create User
+![Order Service](CREATE.png)
+
+### 3. Read User
+![GET all Orders](READ.png)
+
+### 4. Update User
+![Update Status](UPDATE.png)
+
+### 5. Validation Procedure
+![Verification](VALIDATION.png)
+
+### 6. Delete User
+![Customer Service](DELETE.png)
+
+### 7. Database Show
+![Error Found](DATABASE.png)
+
+
+
 ## Endpoints
 
 | Method | Endpoint              | Description        |
@@ -23,3 +49,17 @@ Flask + MySQL REST API for managing student records.
 - Email: valid format, must be unique
 - Age: number between 1–120
 - Course: min 2 characters
+
+
+## Learning Outcomes
+
+### 1. Understanding REST API Architecture
+### 2. Flask Backend Development
+### 3. Database Connectivity
+### 4. CRUD Operations
+### 5. Input Validation
+### 6. Environment Variable Management
+### 7. Cloud Database Integration
+### 8. API Deployment on Cloud
+### 9. API Testing with Postman
+### 10. Error Handling
