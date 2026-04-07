@@ -8,29 +8,30 @@ Flask + MySQL REST API for managing student records.
 3. Run MySQL setup SQL from `schema.sql`
 4. Start server: `python app.py`
 
+## Render Deployable Link: https://two3bis70052-experiment13fsd2-2.onrender.com
 
 ## Screenshots
 
 ### 1. Server/DB Connection Running
-![Customer Service](SERVERRUN.png)
+![Server Running](SERVERRUN.png)
 
 ### 2. Create User
-![Order Service](CREATE.png)
+![POST](CREATE.png)
 
 ### 3. Read User
 ![GET all Orders](READ.png)
 
 ### 4. Update User
-![Update Status](UPDATE.png)
+![PUT](UPDATE.png)
 
 ### 5. Validation Procedure
 ![Verification](VALIDATION.png)
 
 ### 6. Delete User
-![Customer Service](DELETE.png)
+![Delete](DELETE.png)
 
 ### 7. Database Show
-![Error Found](DATABASE.png)
+![Database showcase](DATABASE.png)
 
 
 
