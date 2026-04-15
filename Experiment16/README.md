@@ -109,7 +109,7 @@ pytest -v
 
 #### Screenshot — pytest Output
 >  _Replace with your screenshot_
-> ![pytest output](screenshots/pytest_output.png)
+> ![pytest output](pytest_output.png)
 
 #### What is tested:
 - `test_home` — checks `/` route returns 200 and correct message
@@ -138,7 +138,7 @@ npx vitest run
 
 #### Screenshot — Vitest Output
 >  _Replace with your screenshot_
-> ![vitest output](screenshots/vitest_output.png)
+> ![vitest output](vitest_output.png)
 
 #### What is tested:
 - `input works correctly` — renders the form, types in the input, verifies value updates
@@ -149,11 +149,11 @@ npx vitest run
 
 #### Screenshot — React Frontend
 >  _Replace with your screenshot_
-> ![frontend UI](screenshots/frontend_ui.png)
+> ![frontend UI](frontend_ui.png)
 
 #### Screenshot — Backend API Response
 >  _Replace with your screenshot_
-> ![backend response](screenshots/backend_response.png)
+> ![backend response](backend_response.png)
 
 ---
 
@@ -170,7 +170,7 @@ npx vitest run
    - **Start Command:** `gunicorn app:app`
 5. Deploy
 
-Live URL: `https://your-app.onrender.com`
+Live URL: `https://two3bis70052experiment16fsd2.onrender.com`
 
 ---
 
@@ -185,7 +185,7 @@ Live URL: `https://your-app.onrender.com`
    - **Publish directory:** `frontend/dist`
 5. Deploy
 
-Live URL: `https://your-app.netlify.app`
+Live URL: `23bis70052-experiment16-fsd2.netlify.app`
 
 ---
 
