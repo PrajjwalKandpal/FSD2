@@ -1,4 +1,4 @@
-name: CD Pipeline - Experiment20
+name: CD Pipeline - Experiment 20
 
 on:
   push:
@@ -9,6 +9,8 @@ on:
       - main
 
 jobs:
+
+  # JOB 1: Build Docker image and push to Docker Hub
   build-and-push:
     name: Build and Push Docker Image
     runs-on: ubuntu-latest
@@ -32,12 +34,13 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/testing-backend:latest
-            ${{ secrets.DOCKER_USERNAME }}/testing-backend:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/experiment20:latest
+            ${{ secrets.DOCKER_USERNAME }}/experiment20:${{ github.sha }}
 
-      - name: Image digest
-        run: echo "Image pushed successfully!"
+      - name: Confirm push
+        run: echo "Docker image pushed successfully!"
 
+  # JOB 2: Pull image and run container (simulated deploy)
   deploy:
     name: Deploy Container
     runs-on: ubuntu-latest
@@ -46,14 +49,16 @@ jobs:
     steps:
       - name: Pull and run Docker container
         run: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}/testing-backend:latest
+          docker pull ${{ secrets.DOCKER_USERNAME }}/experiment20:latest
           docker run -d -p 3000:3000 \
-            --name testing-backend \
-            ${{ secrets.DOCKER_USERNAME }}/testing-backend:latest
+            --name experiment20 \
+            ${{ secrets.DOCKER_USERNAME }}/experiment20:latest
+
+      - name: Wait for container to start
+        run: sleep 5
 
       - name: Health check
         run: |
-          sleep 5
           curl -f http://localhost:3000/health || exit 1
           echo "Health check passed!"
 
