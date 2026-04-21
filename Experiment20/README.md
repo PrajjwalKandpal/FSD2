@@ -189,56 +189,56 @@ docker rm experiment20
 ### 1. Docker Build — Success
 > `docker build -t experiment20:latest .` completed with 11/11 steps finished
 
-![Docker Build](Screenshot_2026-04-21_213714.png)
+![Docker Build](Screenshot 2026-04-21 213714.png)
 
 ---
 
 ### 2. `docker images` — Image Listed
 > Confirms the image `experiment20:latest` was built locally (189MB disk, 46.3MB content)
 
-![Docker Images](Screenshot_2026-04-21_213739.png)
+![Docker Images](Screenshot 2026-04-21 213739.png)
 
 ---
 
 ### 3. `docker ps` — Container Running
 > Container `experiment20` is UP on port `0.0.0.0:3000->3000/tcp`
 
-![Docker PS](Screenshot_2026-04-21_213842.png)
+![Docker PS](Screenshot 2026-04-21 213842.png)
 
 ---
 
 ### 4. Health Check in Browser
 > Visiting `localhost:3000/health` returns `{"status":"healthy"}`
 
-![Health Check](Screenshot_2026-04-21_213949.png)
+![Health Check](Screenshot 2026-04-21 213949.png)
 
 ---
 
 ### 5. Docker Desktop — Container Dashboard
 > Container `experiment20` visible and running in Docker Desktop UI
 
-![Docker Desktop](Screenshot_2026-04-21_214048.png)
+![Docker Desktop](Screenshot 2026-04-21 214048.png)
 
 ---
 
 ### 6. Docker Stop & Remove
 > Container stopped and removed cleanly using `docker stop` and `docker rm`
 
-![Docker Stop Remove](Screenshot_2026-04-21_214434.png)
+![Docker Stop Remove](Screenshot 2026-04-21 214434.png)
 
 ---
 
 ### 7. Docker Hub — Image Pushed
 > Two tags pushed to `prajjwalkandpal/experiment20`: `latest` and commit SHA tag (44.14 MB, linux/amd64)
 
-![Docker Hub](Screenshot_2026-04-21_222927.png)
+![Docker Hub](Screenshot 2026-04-21 222927.png)
 
 ---
 
 ### 8. GitHub Actions — Pipeline Success ✅
 > Both jobs — **Build and Push Docker Image** (21s) and **Deploy Container** (10s) — completed with green checkmarks. Total duration: 37s.
 
-![GitHub Actions](Screenshot_2026-04-21_222803.png)
+![GitHub Actions](Screenshot 2026-04-21 222803.png)
 
 ---
 
