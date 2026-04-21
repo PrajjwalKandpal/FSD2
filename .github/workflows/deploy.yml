@@ -9,7 +9,6 @@ on:
       - main
 
 jobs:
-
   # JOB 1: Build Docker image and push to Docker Hub
   build-and-push:
     name: Build and Push Docker Image
@@ -31,7 +30,7 @@ jobs:
       - name: Build and Push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./Experiment20
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/experiment20:latest
@@ -55,12 +54,14 @@ jobs:
             ${{ secrets.DOCKER_USERNAME }}/experiment20:latest
 
       - name: Wait for container to start
-        run: sleep 5
-
-      - name: Health check
         run: |
-          curl -f http://localhost:3000/health || exit 1
-          echo "Health check passed!"
+          for i in {1..10}; do
+            curl -sf http://localhost:3000/health && echo "Health check passed!" && exit 0
+            echo "Attempt $i failed, retrying in 3s..."
+            sleep 3
+          done
+          echo "Health check failed after all retries"
+          exit 1
 
       - name: Show running containers
         run: docker ps
