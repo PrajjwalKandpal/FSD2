@@ -1,4 +1,4 @@
-# Experiment 20 — Dockerized Node.js App with GitHub Actions CD Pipeline
+# Experiment 20 (23BIS70052) — Implement CI/CD pipeline for application deployment
 
 ## Objective
 
